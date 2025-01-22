@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+
+    <button
+   
+    >
+      rock
+    </button>
+    <button>paper</button>
+    <button>scissors</button>
+
+    <script>
+      const choices = ["rock", "paper", "scissors"];
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const playerChoice = button.textContent.toLowerCase();
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+      console.log(`Player's choice: ${playerChoice}`);
+      console.log(`Computer's choice: ${computerChoice}`);
+
+      let result;
+
+      if (playerChoice === computerChoice) {
+        result = "It's a tie!";
+      } else if (
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper")
+      ) {
+        result = "Player wins!";
+      } else if (playerChoice === "rock" && computerChoice === "scissors") {
+        result = "Player wins!";
+      } else {
+        result = "Computer wins!";
+      }
+
+      console.log(result);
+    });
+  });
+    </script>
+  </body>
+</html>
