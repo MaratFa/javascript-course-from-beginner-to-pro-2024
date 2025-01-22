@@ -20,7 +20,9 @@
 
       buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const playerChoice = button.textContent.toLowerCase();
+      let playerChoice = button.textContent.toLowerCase();
+      playerChoice = playerChoice.replace(/\s/g,'');      ;
+      console.log(typeof playerChoice);
       const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
       console.log(`Player's choice: ${playerChoice}`);
