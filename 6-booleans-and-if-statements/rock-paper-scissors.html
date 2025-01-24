@@ -24,9 +24,15 @@
 
       let result = '';
 
-      if (computerMove == 'rock') {
+      if (computerMove === 'rock') {
         'Tie.'
+      } else if (computerMove === 'paper') {
+        result = 'You lose.';
+      } else if (computerMove === 'scissors') {
+        result = 'You win.';
       }
+
+      alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
       "
     >
       Rock
