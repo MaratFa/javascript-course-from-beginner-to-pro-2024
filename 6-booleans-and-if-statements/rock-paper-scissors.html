@@ -13,7 +13,7 @@
       let computerMove = '';
       
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'rock';
+        computerMove ='rock';
       } else if (randomNumber < 2/3) {
         computerMove = 'paper';
       } else {
@@ -25,7 +25,7 @@
       let result = '';
 
       if (computerMove === 'rock') {
-        'Tie.'
+        `'Tie.'`
       } else if (computerMove === 'paper') {
         result = 'You lose.';
       } else if (computerMove === 'scissors') {
@@ -33,6 +33,7 @@
       }
 
       alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
+      console.log(result)
       "
     >
       Rock
