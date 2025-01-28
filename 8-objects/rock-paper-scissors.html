@@ -13,7 +13,7 @@
 
     <script>
       const score = JSON.parse(localStorage.getItem("score"));
-      console.log(score)
+      console.log(score);
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -81,7 +81,7 @@
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
-        localStorage.removeItem('score');
+        localStorage.removeItem("score");
       }
     </script>
   </body>
