@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="button2">Second button</button>
+    <script>
+      document.querySelector("button").innerHTML = 'Hi1';
+      const btn2 = document.querySelector(".button2");
+      btn2.innerHTML = 'Hi2'; 
+      console.log(btn2);
+
+      /*
+      console.log(document.title);
+      document.title = "Changed";
+
+      console.log(document.body);
+      console.log(typeof document.body);
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "<button>Button</button><br><b>Changed</b>";
+      */
+
+      // document.body.innerText = "hello";
+      // document.title = "Good Job!";
+    </script>
+  </body>
+</html>
