@@ -5,11 +5,12 @@
   </head>
   <body>
     <p>YouTube Subscribe Button</p>
-    <button class="js-subscribe-button" onclick="subscribe()">Subscribe</button>
+    <button class="js-subscribe-button" onclick="subscribe()">
+         Subscribe    </button>
     <script>
       function subscribe() {
         const buttonElement = document.querySelector(".js-subscribe-button");
-        buttonElement.innerHTML === "Subscribe"
+        buttonElement.innerText === "Subscribe"
           ? (buttonElement.innerHTML = "Subscribed")
           : (buttonElement.innerHTML = "Subscribe");
       }
