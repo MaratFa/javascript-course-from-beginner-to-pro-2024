@@ -2,13 +2,35 @@
 <html lang="en">
   <head>
     <title>Rock Paper Scissors</title>
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial;
+      }
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .move-button {
+        width: 120px;
+        height: 120px;
+      }
+    </style>
   </head>
   <body>
-    <p>Rock Paper Scissors</p>
+    <p class="title">Rock Paper Scissors</p>
 
-    <button onclick="playGame('rock')">Rock</button>
-    <button onclick="playGame('paper')">Paper</button>
-    <button onclick="playGame('scissors')">Scissors</button>
+    <button onclick="playGame('rock')" class="move-button">
+      <img
+        src="/10-html-css-and-javascript-together/rock-emoji.png"
+        alt="rock-emoji"
+      />
+    </button>
+    <button onclick="playGame('paper')" class="move-button">Paper</button>
+    <button onclick="playGame('scissors')" class="move-button">Scissors</button>
 
     <p class="js-result"></p>
     <p class="js-moves"></p>
@@ -23,7 +45,9 @@
         ties: 0,
       };
 
-      document.querySelector(".js-score").innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+      document.querySelector(
+        ".js-score"
+      ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
