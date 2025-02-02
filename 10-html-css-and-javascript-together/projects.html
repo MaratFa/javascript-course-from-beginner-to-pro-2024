@@ -36,8 +36,8 @@
         color: white;
         border: none;
         font-size: 15px;
-        padding: 11px;
-
+        padding: 12px 15px;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -60,7 +60,9 @@
       handleCostKeydown(event)
     "
     />
-    <button onclick="calculateTotal()" class="calculate-button">Calculate</button>
+    <button onclick="calculateTotal()" class="calculate-button">
+      Calculate
+    </button>
     <p class="js-total-cost"></p>
 
     <script>
