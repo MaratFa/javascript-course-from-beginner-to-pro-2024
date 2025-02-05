@@ -3,6 +3,7 @@ const todoList = [
   { name: "wash dishes", dueDate: "2025-02-02" },
 ];
 
+debugger;
 function renderTodoList() {
   let todoListHTML = "";
 
