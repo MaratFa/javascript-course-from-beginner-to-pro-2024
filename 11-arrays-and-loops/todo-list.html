@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
+    <link rel="stylesheet" href="styles/todo-list.css" />
   </head>
   <body>
     <p>Todo List</p>
     <input placeholder="Todo name" class="js-name-input" />
-    <input type="date" />
+    <input type="date" class="js-due-date-input" />
     <button onclick="addTodo()">Add</button>
 
-    <div class="js-todo-list">Text</div>
+    <div class="js-todo-list todo-grid"></div>
 
     <script src="scripts/todo-list.js"></script>
   </body>
