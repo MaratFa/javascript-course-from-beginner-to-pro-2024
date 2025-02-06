@@ -4,5 +4,6 @@ body {
 
 .todo-grid {
   display: grid;
+  grid-template-columns: 200px 150px 100px;
   
 }
