@@ -4,7 +4,13 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button onclick="" class="js-button">Click</button>
+
     <script>
+      const buttonElement = document.querySelector('.js-button');
+      buttonElement.addEventListener('click', () => {
+        console.log('Button clicked!');
+      });
       /*
         const num = 2;
 
@@ -42,12 +48,49 @@
         run(() => console.log("Hello, World"));
       */
 
+      /*
       window.setTimeout(() => {
         console.log("Hello1");
         console.log("Hello2");
       }, 3000);
 
       console.log("next line");
+      */
+
+      /*
+      ["make dinner", "wash dishes", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "wash dishes") return;
+          console.log(`${index}: ${value}`);
+        }
+      );
+
+      const regularFunction = function (param, param2) {
+        console.log("Hello, World!");
+        return 5;
+      };
+
+      const arrowFunction = (param, param2) => {
+        console.log("Hello, World!");
+        return 5;
+      };
+      arrowFunction();
+
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+      oneParam(5);
+
+      const oneLine = () => 5 + 3;
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => console.log("Hello, World!"),
+        method2() {
+          console.log("Hello from method 2");
+        },
+      };
+      */
     </script>
   </body>
 </html>
