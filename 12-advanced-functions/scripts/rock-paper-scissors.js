@@ -9,13 +9,19 @@ document.querySelector(
 ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 
 let isAutoPlaying = false;
-
+let intervalId;
 
 function autoPlay() {
-  setInterval(function () {
-    const playerMove = pickComputerMove();
-    playGame(playerMove);
-  }, 1000);
+  if (!isAutoPlaying) {
+    intervalId = setInterval(() => {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
 }
 
 function playGame(playerMove) {
@@ -58,7 +64,6 @@ function playGame(playerMove) {
   }
 
   localStorage.setItem("js-score", JSON.stringify(score));
-  console.log(localStorage);
 
   updateScoreElement();
 
