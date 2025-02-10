@@ -7,10 +7,18 @@
     <button onclick="" class="js-button">Click</button>
 
     <script>
-      const buttonElement = document.querySelector('.js-button');
-      buttonElement.addEventListener('click', () => {
-        console.log('Button clicked!');
+      const buttonElement = document.querySelector(".js-button");
+
+      const eventListener = () => console.log("Button clicked2!");
+
+      buttonElement.addEventListener("click", eventListener);
+
+      buttonElement.removeEventListener("click", eventListener);
+
+      buttonElement.addEventListener("click", () => {
+        console.log("Button clicked2!");
       });
+
       /*
         const num = 2;
 
