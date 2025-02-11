@@ -30,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-.delete-todo-button {
+.js-delete-todo-button {
   background-color: darkred;
   color: white;
   border: none;
