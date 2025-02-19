@@ -62,6 +62,7 @@ cart.forEach((cartItem) => {
                 <div class="delivery-options-title">
                   Choose a delivery option:
                 </div>
+                ${deliveryOptionsHTML(matchingProduct)}
               </div>
             </div>
           </div>
@@ -89,13 +90,13 @@ function deliveryOptionsHTML(matchingProduct) {
         />
         <div>
           <div class="delivery-option-date">${dateString}</div>
-          <div class="delivery-option-price"${priceString} - Shipping</div>
+          <div class="delivery-option-price">${priceString} - Shipping</div>
         </div>
       </div>
     `;
   });
 
-  console.log(html)
+  console.log(html);
   return html;
 }
 
