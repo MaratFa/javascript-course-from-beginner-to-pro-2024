@@ -6,6 +6,7 @@ import {
   deliveryOptions,
   getDeliveryOption,
 } from "../../data/deliveryOptions.js";
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 const today = dayjs();
 const deliveryDate = today.add(7, "days");
@@ -119,6 +120,8 @@ export function renderOrderSummary() {
       );
 
       container.remove();
+
+      renderPaymentSummary();
     });
   });
 
