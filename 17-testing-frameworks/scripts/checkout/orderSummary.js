@@ -62,7 +62,6 @@ export function renderOrderSummary() {
           ? "FREE"
           : `${formatCurrency(deliveryOption.priceCents)} -`;
 
-      console.log(cartItem);
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
       html += `
